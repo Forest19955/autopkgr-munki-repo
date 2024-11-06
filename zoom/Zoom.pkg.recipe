@@ -3,7 +3,7 @@
 <plist version="1.0">
     <dict>
         <key>Description</key>
-        <string>Downloads latest Zoom disk image and builds a package.</string>
+        <string>Downloads latest Zoom package and builds a package for Munki.</string>
         <key>Identifier</key>
         <string>com.github.autopkg.pkg.Zoom</string>
         <key>Input</key>
@@ -11,7 +11,7 @@
             <key>NAME</key>
             <string>Zoom</string>
             <key>VERSIONTYPE</key>
-            <string>CFBundleVersion</string>
+            <string>CFBundleShortVersionString</string>
         </dict>
         <key>MinimumVersion</key>
         <string>1.0.0</string>
@@ -23,7 +23,7 @@
                 <key>Arguments</key>
                 <dict>
                     <key>input_plist_path</key>
-                    <string>%pathname%/Zoom.pkg/Contents/Info.plist</string>
+                    <string>%pathname%/Contents/Info.plist</string>
                     <key>plist_version_key</key>
                     <string>%VERSIONTYPE%</string>
                 </dict>
@@ -32,9 +32,11 @@
             </dict>
             <dict>
                 <key>Processor</key>
-                <string>AppPkgCreator</string>
+                <string>PkgCopier</string>
                 <key>Arguments</key>
                 <dict>
+                    <key>pkg_path</key>
+                    <string>%pathname%</string>
                     <key>pkgname</key>
                     <string>%NAME%-%version%</string>
                 </dict>
@@ -42,3 +44,4 @@
         </array>
     </dict>
 </plist>
+
