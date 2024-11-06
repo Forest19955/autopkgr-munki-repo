@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Installs the latest version of Zoom.</string>
+    <key>Identifier</key>
+    <string>com.github.homebysix.install.Zoom</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>Zoom</string>
+        <key>DOWNLOAD_URL</key>
+        <string>https://zoom.us/client/latest/zoomusInstaller.pkg</string>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>1.0.1</string>
+    <key>ParentRecipe</key>
+    <string>com.github.homebysix.pkg.Zoom</string>
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Processor</key>
+            <string>URLDownloader</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>%DOWNLOAD_URL%</string>
+                <key>filename</key>
+                <string>%NAME%.pkg</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>Installer</string>
+            <key>Arguments</key>
+            <dict>
+                <key>pkg_path</key>
+                <string>%pathname%</string>
+            </dict>
+        </dict>
+    </array>
+</dict>
+</plist>
