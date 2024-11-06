@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Installs the latest version of Zoom.</string>
     <key>Identifier</key>
-    <string>com.github.homebysix.install.Zoom</string>
+    <string>com.github.Forest19955.install.Zoom</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
