@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest &apos;Slack&apos; and imports into Munki.</string>
 	<key>Identifier</key>
-	<string>com.github.Forest19955.slack</string>
+	<string>com.github.autopkg.slack</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
